@@ -115,5 +115,7 @@ if __name__ == "__main__":
 This setup ensures that the terminal is properly initialized and restored after the game ends.
 
 ---
-```
 Note : Make sure to create a Virtual Environment to install (Windows-curses) or you can also install it in global space.
+```
+pip install windows-curses
+
