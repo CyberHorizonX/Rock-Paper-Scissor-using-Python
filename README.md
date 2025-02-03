@@ -38,17 +38,6 @@ import os
 - `Thread` and `Event` from `threading`: For handling concurrent input while the countdown timer is running.
 - `os`: Used to check the operating system for sound playback.
 
-## Global Variables
-
-```python
-choices_art = { ... }
-player_stats = {"wins": 0, "losses": 0, "draws": 0}
-```
-
-- `choices_art`: A dictionary containing the ASCII art representations of Rock, Paper, and Scissors.
-- `player_stats`: A dictionary to keep track of the player's wins, losses, and draws.
-
-## Functions
 
 ### play_sound
 
@@ -63,73 +52,6 @@ Plays a sound using the system's beep functionality. This function is platform-d
 #### Parameters:
 - `frequency`: The frequency of the beep sound (default is 500 Hz).
 - `duration`: Duration of the beep in milliseconds (default is 200 ms).
-
----
-
-### point
-
-```python
-def point(you, com):
-```
-
-Determines the outcome of a round based on the player's choice and the computer's choice.
-
-#### Parameters:
-- `you`: The player's choice (`'r'`, `'p'`, or `'s'`).
-- `com`: The computer's choice (`'r'`, `'p'`, or `'s'`).
-
-#### Returns:
-- `-1`: If the round is a draw.
-- `1`: If the player wins.
-- `0`: If the computer wins.
-
----
-
-### countdown_timer
-
-```python
-def countdown_timer(stdscr, timeout=5):
-```
-
-Displays a countdown timer on the terminal for the player's turn.
-
-#### Parameters:
-- `stdscr`: The standard screen object for drawing in the terminal.
-- `timeout`: The number of seconds for the countdown (default is 5 seconds).
-
----
-
-### display_choice
-
-```python
-def display_choice(stdscr, choice, row, label, color_pair):
-```
-
-Displays the player's or computer's choice along with the corresponding ASCII art.
-
-#### Parameters:
-- `stdscr`: The standard screen object.
-- `choice`: The choice to display (`'r'`, `'p'`, or `'s'`).
-- `row`: The starting row for displaying the choice.
-- `label`: The label to show above the choice.
-- `color_pair`: The color pair to use for text formatting.
-
----
-
-### play_again
-
-```python
-def play_again(stdscr):
-```
-
-Prompts the player to decide if they want to play another game.
-
-#### Parameters:
-- `stdscr`: The standard screen object.
-
-#### Returns:
-- `True`: If the player chooses to play again.
-- `False`: If the player chooses not to play again.
 
 ---
 
@@ -191,3 +113,7 @@ if __name__ == "__main__":
 ```
 
 This setup ensures that the terminal is properly initialized and restored after the game ends.
+
+---
+```
+Note : Make sure to create a Virtual Environment to install (Windows-curses) or you can also install it in global space.
